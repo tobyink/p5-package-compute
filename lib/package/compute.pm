@@ -9,8 +9,8 @@ BEGIN {
 	$package::compute::VERSION   = '0.001';
 }
 
-use B::Hooks::Parser  0.08   qw();
-use Carp              0      qw(confess);
+use B::Hooks::Parser 0.08 qw();
+use Carp qw(confess);
 
 sub import
 {
