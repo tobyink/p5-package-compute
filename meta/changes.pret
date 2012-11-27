@@ -4,3 +4,8 @@
 	issued  2012-10-26;
 	label   "Initial release".
 
+`package-compute 0.002 cpan:TOBYINK`
+	issued  2012-11-27;
+	changeset [
+		item "Provide 'use package::compute -anon' to compute an anonymous package name."^^Addition;
+	].
