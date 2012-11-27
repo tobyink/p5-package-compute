@@ -9,3 +9,9 @@
 	changeset [
 		item "Provide 'use package::compute -anon' to compute an anonymous package name."^^Addition;
 	].
+
+`package-compute 0.003 cpan:TOBYINK`
+	issued  2012-11-27;
+	changeset [
+		item "Make sure t/02usage.t does not depend on Perl 5.10."^^Packaging;
+	].

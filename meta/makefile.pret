@@ -6,5 +6,5 @@
 	readme_from       m`package::compute`;
 	requires          p`B::Hooks::Parser`;
 	test_requires     p`Test::More 0.61`;
-	.
+.
 
