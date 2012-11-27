@@ -6,11 +6,13 @@ use warnings;
 
 BEGIN {
 	$package::compute::AUTHORITY = 'cpan:TOBYINK';
-	$package::compute::VERSION   = '0.001';
+	$package::compute::VERSION   = '0.002';
 }
 
 use B::Hooks::Parser 0.08 qw();
 use Carp qw(confess);
+
+my $count = 0;
 
 sub import
 {
@@ -22,6 +24,10 @@ sub import
 	if (not defined $name)
 	{
 		$pkg = $caller;
+	}
+	elsif (!ref $name and $name eq '-anon')
+	{
+		$pkg = sprintf('%s::__ANON__::%s', $class, ++$count);
 	}
 	elsif (!ref $name and $name eq '-filename')
 	{
@@ -193,6 +199,12 @@ As a special case, you can also do:
 Which will attempt to determine the package name based on the filename it
 is defined in, much like C<autopackage> does.
 
+Also:
+
+   use package::compute -anon;
+
+Will compute an "anonymous" (i.e. arbitrary) package name.
+
 =head2 Utility Function
 
 This module also exports a utility function:
@@ -218,7 +230,8 @@ code:
 As you can see, this makes it possible to avoid hard-coded references to
 the MyProject::Person class.
 
-C<< __RPACKAGE__ >> doesn't support the special C<< -filename >> option.
+C<< __RPACKAGE__ >> doesn't support the special C<< -filename >> and 
+C<< -anon >> options.
 
 It is possible to import the C<< __RPACKAGE__ >> function alone, without
 the package declaration magic using:
