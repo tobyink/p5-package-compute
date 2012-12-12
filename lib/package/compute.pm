@@ -153,11 +153,11 @@ caller. (C<< "." >> elsewhere is a no-op.)
 
 =item *
 
-The component C<< ".." >> climbs "up" the package heirarchy.
+The component C<< ".." >> climbs "up" the package hierarchy.
 
 =item *
 
-The component C<< "..." >> climbs "up" the package heirarchy by two
+The component C<< "..." >> climbs "up" the package hierarchy by two
 levels. Et cetera.
 
 =back
@@ -177,17 +177,17 @@ Thus the following are all valid ways of expressing package "Foo::Bar":
    use package::compute "./Bar";
    ####
    
-   ### Climbing the package heirarchy
+   ### Climbing the package hierarchy
    package Foo::XXX;
    use package::compute "../Bar";
    ####
    
-   ### Climbing the package heirarchy twice
+   ### Climbing the package hierarchy twice
    package Foo::XXX::YYY;
    use package::compute "../../Bar";
    ####
    
-   ### Climbing the package heirarchy twice - shortcut
+   ### Climbing the package hierarchy twice - shortcut
    package Foo::XXX::YYY;
    use package::compute ".../Bar";
    ####
