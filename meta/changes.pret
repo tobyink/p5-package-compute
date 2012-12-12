@@ -15,3 +15,10 @@
 	changeset [
 		item "Make sure t/02usage.t does not depend on Perl 5.10."^^Packaging;
 	].
+
+`package-compute 0.004 cpan:TOBYINK`
+	issued  2012-12-12;
+	changeset [
+		item [ label "Fix spelling errors."; a dcs:Documentation; dcs:fixes RT#81514; dcs:thanks cpan:SPROUT ];
+		item "Document test suite."^^Documentation;
+	].

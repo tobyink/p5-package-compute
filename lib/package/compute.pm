@@ -6,7 +6,7 @@ use warnings;
 
 BEGIN {
 	$package::compute::AUTHORITY = 'cpan:TOBYINK';
-	$package::compute::VERSION   = '0.003';
+	$package::compute::VERSION   = '0.004';
 }
 
 use B::Hooks::Parser 0.08 qw();
