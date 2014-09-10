@@ -1,0 +1,6 @@
+@prefix deps:  <http://ontologi.es/doap-deps#> .
+
+<http://purl.org/NET/cpan-uri/dist/package-compute/project>
+	deps:runtime-requirement         [ deps:on "B::Hooks::Parser"^^deps:CpanId ];
+	deps:test-requirement            [ deps:on "Test::More 0.61"^^deps:CpanId ].
+
