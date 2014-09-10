@@ -22,3 +22,10 @@
 		item [ label "Fix spelling errors."; a dcs:Documentation; dcs:fixes RT#81514; dcs:thanks cpan:SPROUT ];
 		item "Document test suite."^^Documentation;
 	].
+
+`package-compute 0.005 cpan:TOBYINK`
+	issued    2014-09-10;
+	changeset [
+		item "Switch to Dist::Inkt."^^Packaging;
+	].
+
